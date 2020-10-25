@@ -28,6 +28,29 @@
   color: #61dafb;
 }
 
+.MainNav{
+  width:100%;
+  margin-top: 15px;
+}
+
+.MainNavLinks{
+  float: right;
+  display: inline-flex;
+  margin: 15px 2% 0 2%;
+  vertical-align: middle;
+}
+
+.NavItem{
+  margin-left: 2%;
+  width: 80px;
+}
+
+.MainImg{
+  float:left;
+  margin-left: 2%;
+  vertical-align: middle;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
