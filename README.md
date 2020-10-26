@@ -3,7 +3,37 @@
 ## About
 SincerelyFrom.com is a travel blog for traveler Natalie Reque. The front-end of the code is written using React.js. Using Docker a container is created with Node.js and Nginx. That container has been uploaded to AWS Elastic Beanstalk to aid in deploying the application.
 
-## App Instructions
+The application was developed on Ubuntu 18.04.
+
+## Deployment Instructions
+
+Open the project directory in a terminal, and run:
+
+```npm run build```
+
+Then to build docker image:
+
+```sudo docker build -t sincerelyfrom .```
+
+Run the container on port 3000 to see if it is working:
+
+```sudo docker run -p 3000:80 sincerelyfrom```
+
+Log into docker:
+
+```docker login```
+
+Tag the local image (use local image ID) to the remote repo & tag:
+
+```docker tag {########} sbossard/sincerelyfrom:latest```
+
+Push to remote repo:
+
+```docker push sbossard/sincerelyfrom:latest```
+
+Log into AWS Console. Go to Elastic Beanstalk and choose the application. In the Actions dropdown choose "Rebuild Environment"
+
+## Local Front End Editing Instructions
 In the project directory, you can run:
 
 ```npm start```
